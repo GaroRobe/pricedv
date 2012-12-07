@@ -22,6 +22,8 @@ class Node(models.Model):
 	weight = models.IntegerField(default=1)
 	lft = models.IntegerField()
 	rgt = models.IntegerField()
+	def __unicode__(self):
+		return self.title
 
 	class Meta:
 		db_table = 'nodes'
@@ -34,6 +36,8 @@ class Firm(models.Model):
 	global_id = models.CharField(max_length = 100)
 	slug_name = models.CharField(max_length = 300)
 	firm_nodes = models.ManyToManyField(Node, through='FirmNodes')
+	def __unicode__(self):
+		return self.title
 
 	class Meta:
 		db_table = 'firms'
@@ -41,6 +45,8 @@ class Firm(models.Model):
 class Text(models.Model):
 	firm_id = models.ForeignKey(Firm, db_column='firm_id')
 	message = models.CharField(max_length = 100)
+	def __unicode__(self):
+		return self.message
 
 	class Meta:
 		db_table = 'texts'
@@ -48,6 +54,8 @@ class Text(models.Model):
 class FirmNodes(models.Model):
 	node_id = models.ForeignKey(Node, db_column='node_id')
 	firm_id = models.ForeignKey(Firm, db_column='firm_id')
+	def __unicode__(self):
+		return self.node_id + ' - ' + self.firm_id
 
 	class Meta:
 		db_table = 'firms_nodes'
@@ -59,6 +67,8 @@ class Chunk(models.Model):
 	comment = models.CharField(max_length = 250, null=True, blank=True, default=None)
 	id_address = models.IntegerField(null=True, blank=True, default=None)
 	parent_id_address = models.ForeignKey('self', null=True, blank=True, default=None, db_column='parent_id_address')
+	def __unicode__(self):
+		return self.value
 
 	class Meta:
 		db_table = 'chunks'
@@ -73,6 +83,8 @@ class Offer(models.Model):
 	pic_note = models.CharField(max_length = 600)
 	node_id = models.ForeignKey(Node, db_column='node_id')
 	node_lft = models.IntegerField()
+	def __unicode__(self):
+		return self.title
 
 	class Meta:
 		db_table = 'offers'

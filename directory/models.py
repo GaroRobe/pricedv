@@ -55,7 +55,7 @@ class FirmNodes(models.Model):
 	node_id = models.ForeignKey(Node, db_column='node_id')
 	firm_id = models.ForeignKey(Firm, db_column='firm_id')
 	def __unicode__(self):
-		return self.node_id + ' - ' + self.firm_id
+		return str(self.node_id) + ' - ' + str(self.firm_id)
 
 	class Meta:
 		db_table = 'firms_nodes'

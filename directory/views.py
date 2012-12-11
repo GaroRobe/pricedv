@@ -5,3 +5,7 @@ from directory.models import *
 def categories(request):
     rootNodes = Node.objects.filter(parent_id = 1)
     return render_to_response('directory/main.html', {'rootNodes': rootNodes})
+
+def root(request):
+    rootNodes = Node.objects.filter(parent_id = 1)
+    return render_to_response('directory/main.html', {'rootNodes': rootNodes})

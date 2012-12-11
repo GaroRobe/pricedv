@@ -1,13 +1,7 @@
-# Create your views here.
-from django.http import HttpResponse
-from django.template import Context, loader
+from django.shortcuts import render_to_response
 from directory.models import *
 
 
 def categories(request):
     rootNodes = Node.objects.filter(parent_id = 1)
-    t = loader.get_template('frontend/main.html')
-    c = Context({
-        'rootNodes': rootNodes,
-    })
-    return HttpResponse(t.render(c))
+    return render_to_response('frontend/main.html', {'rootNodes': rootNodes})

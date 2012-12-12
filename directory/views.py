@@ -3,6 +3,8 @@ from django.shortcuts import render
 from directory.models import *
 
 import math
+from httpmethod import *
+from django.http import HttpResponse
 
 
 def categories(request):
@@ -16,3 +18,15 @@ def root(request):
         'rootNodes': rootNodes,
         'rootNodesHalfLength': rootNodesHalfLength,
     })
+    return render(request, 'directory/main.html', {'rootNodes': rootNodes})
+
+class AddFirm(BaseView):
+	@get
+	def addfirm_get(self, request):
+		return HttpResponse('GET Fired!')
+	    #return render_to_response('directory/forms/addCompany.html')
+
+	@post
+	def addfirm_post(self, request):
+		return HttpResponse('POST Fired!')
+	    #return render_to_response('directory/forms/addCompany.html')

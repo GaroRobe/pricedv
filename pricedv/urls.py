@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from directory.views import AddFirm
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -13,7 +14,7 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-     url(r'^admin/', include(admin.site.urls)),
-     url(r'^categories/', 'directory.views.categories'),
-     url(r'^addfirm/', 'directory.views.addfirm'),
+     url(r'^admin/$', include(admin.site.urls)),
+     url(r'^categories/$', 'directory.views.categories'),
+     url(r'^addfirm/$', AddFirm()),
      url(r'^', 'directory.views.root'),

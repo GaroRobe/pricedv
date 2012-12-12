@@ -3,3 +3,4 @@
 *.pyc
 local_settings.py
 pricedv/settings.py
+/pricedv/settings.py

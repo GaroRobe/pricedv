@@ -15,5 +15,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
      url(r'^admin/', include(admin.site.urls)),
      url(r'^categories/', 'directory.views.categories'),
+     url(r'^addfirm/', 'directory.views.addfirm'),
      url(r'^', 'directory.views.root'),
-)

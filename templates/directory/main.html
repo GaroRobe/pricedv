@@ -1,1 +1,255 @@
-hello world!!
+<!doctype html>
+<html>
+	<head>
+        <meta charset="utf-8"/>
+        <title>Прайс ДВ</title>
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css"/>
+    </head>
+	<body>
+        <!-- Top navigation -->
+		<nav class="main-menu">
+			<ul class="row">
+				<li><a href="#">О проекте</a></li>
+				<li><a href="#">Размещение информации</a></li>
+				<li><a href="#">Реклама на сайте</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#">Карта сайта</a></li>
+			</ul>
+		</nav>
+        
+        <!-- Header & Content -->
+		<div class="wrapper">
+            <!-- Header -->
+			<header class="main-header">
+				<div class="row">
+                    <div class="twelve columns">
+                        <h1 class="logo">
+                            <a href="#" alt="Прайс ДВ">Прайс ДВ</a>
+                        </h1>
+                    </div>
+					<div class="twelve columns">
+                        <div class="site-search">
+                            <a href="#" class="button red"><img src="{{ STATIC_URL }}images/icon-search.png" alt=""></a>
+                            <input type="text" value="Введите поисковый запрос"/>
+                        </div>
+                    </div>
+				</div>
+                
+                <!-- Sub menu -->
+				<div class="row">
+					<ul class="sub-menu">
+						<li><a href="#">Добавить фирму</a></li>
+						<li><a href="#">Частное объявление</a></li>
+                        <li><a href="#">Разместить рекламу</a></li>
+                        <li><a href="#">Разместить прайс-лист</a></li>
+					</ul>
+				</div>
+			</header>
+            
+            <!-- Top banner -->
+			<div class="row">
+				<div class="adv wide">
+                    <img src="{{ STATIC_URL }}images/banner-wide.png" alt=""/>
+                </div>
+			</div>
+            
+            <!-- Content -->
+			<div class="row">
+				<div class="nineteen columns page-content">
+                    <div class="main-filter">
+                    	<dl class="tabs">
+                    		<dd class="active">
+                                <a href="#itemsFilter">Товары и услуги</a>
+                            </dd>
+                    		<dd>
+                                <a href="#companiesFilter">Компании</a>
+                            </dd>
+                    	</dl>
+                        <ul class="tabs-content">
+                        	<li class="itemsFilterTab active">
+                                <p>В каталоге 36633 предприятия и 268651 предложение от 393 поставщиков</p>
+                                <h4>Поиск товаров и услуг</h4>
+                                <input type="text" class="filterSearch" value="Введите наименование товара или ключевые слова"/>
+                                <h4><span class="dotted">Выбрать регион или город</span></h4>
+                                <div class="filterLine regionFilter">
+                                    <p>Регион:&nbsp;</p>
+                                    <ul>
+                                        <li>Амурская область<span class="clearFilter"></span></li>
+                                        <li>Амурская область<span class="clearFilter"></span></li>
+                                    </ul>
+                                </div>
+                                <div class="filterLine cityFilter">
+                                    <p>Город:&nbsp;</p>
+                                    <ul>
+                                        <li>Уссурийск<span class="clearFilter"></span></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        	<li class="companiesFilterTab">
+                                <p>В каталоге 36633 предприятия и 268651 предложение от 393 поставщиков</p>
+                                <h4>Поиск товаров и услуг</h4>
+                                <input type="text" class="filterSearch" value="Введите наименование товара или ключевые слова"/>
+                                <h4><span class="dotted">Выбрать регион или город</span></h4>
+                                <div class="filterLine regionFilter">
+                                    <p>Регион:&nbsp;</p>
+                                    <ul>
+                                        <li>Амурская область<span class="clearFilter"></span></li>
+                                        <li>Амурская область<span class="clearFilter"></span></li>
+                                    </ul>
+                                </div>
+                                <div class="filterLine cityFilter">
+                                    <p>Город:&nbsp;</p>
+                                    <ul>
+                                        <li>Уссурийск<span class="clearFilter"></span></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="categories">
+                        	<ul>
+                        		<li class="odd first-entry">Автомобили. Транспорт <span>(45667)</span></li>
+                        		<li class="even">Аптекарские товары, медтехника <span>(789)</span></li>
+                        		<li class="odd">Аттракционы, игровые автоматы <span>(639)</span></li>
+                        		<li class="even">Аудио-, видеотехника <span>(125)</span></li>
+                        		<li class="odd first-entry">Банковское, кассовое оборудование <span>(889)</span></li>
+                        		<li class="even">Бытовая техника <span>(223)</span></li>
+                        	</ul>
+                        	<ul>
+                        		<li class="odd first-entry">Оборудование <span>(17)</span></li>
+                        		<li class="even">Обувь, средства ухода за обувью <span>(65)</span></li>
+                        		<li class="odd">Одежда, белье, головные уборы <span>(144)</span></li>
+                        		<li class="even">Оргтехника, офисные принадлежности <span>(60)</span></li>
+                        		<li class="odd">Отдых и культура <span>(3)</span></li>
+                        		<li class="even first-entry">Продукты питания <span>(55)</span></li>
+                        	</ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Side banners -->
+				<aside class="five columns side-adv">
+                    <div class="adv"><img src="{{ STATIC_URL }}images/banners.png" alt=""/></div>
+                </aside>
+			</div>
+            
+            <!-- Bottom banner -->
+			<div class="row">
+				<div class="adv wide">
+                    <img src="{{ STATIC_URL }}images/banner-wide.png" alt=""/>
+                </div>
+			</div>
+            
+            <!-- Partners news -->
+            <div class="partners">
+            	<div class="row">
+                    <h3 class="columns">Новости наших партнеров</h3>
+                </div>
+            	<ul class="row">
+                    <li class="four columns">
+                        <div class="news">
+                            <img src="{{ STATIC_URL }}images/partner-banner.png" alt="">
+                            <p>Покупайте путевки в лето уже сегодня! Новые акции раннего бронирования в яркую Испанию, гостеприимную Турцию, солнечную Болгарию. Количество мест ограничено.</p>
+                            <a href="#">посетить сайт</a>
+                        </div>
+                    </li>
+                    <li class="four columns">
+                        <div class="news">
+                            <img src="{{ STATIC_URL }}images/partner-banner.png" alt="">
+                            <p>Покупайте путевки в лето уже сегодня! Новые акции раннего бронирования в яркую Испанию, гостеприимную Турцию, солнечную Болгарию. Количество мест ограничено.</p>
+                            <a href="#">посетить сайт</a>
+                        </div>
+                    </li>
+                    <li class="four columns">
+                        <div class="news">
+                            <img src="{{ STATIC_URL }}images/partner-banner.png" alt="">
+                            <p>Покупайте путевки в лето уже сегодня! Новые акции раннего бронирования в яркую Испанию, гостеприимную Турцию, солнечную Болгарию. Количество мест ограничено.</p>
+                            <a href="#">посетить сайт</a>
+                        </div>
+                    </li>
+                    <li class="four columns">
+                        <div class="news">
+                            <img src="{{ STATIC_URL }}images/partner-banner.png" alt="">
+                            <p>Покупайте путевки в лето уже сегодня! Новые акции раннего бронирования в яркую Испанию, гостеприимную Турцию, солнечную Болгарию. Количество мест ограничено.</p>
+                            <a href="#">посетить сайт</a>
+                        </div>
+                    </li>
+                    <li class="four columns">
+                        <div class="news">
+                            <img src="{{ STATIC_URL }}images/partner-banner.png" alt="">
+                            <p>Покупайте путевки в лето уже сегодня! Новые акции раннего бронирования в яркую Испанию, гостеприимную Турцию, солнечную Болгарию. Количество мест ограничено.</p>
+                            <a href="#">посетить сайт</a>
+                        </div>
+                    </li>
+                    <li class="four columns">
+                        <div class="news">
+                            <img src="{{ STATIC_URL }}images/partner-banner.png" alt="">
+                            <p>Покупайте путевки в лето уже сегодня! Новые акции раннего бронирования в яркую Испанию, гостеприимную Турцию, солнечную Болгарию. Количество мест ограничено.</p>
+                            <a href="#">посетить сайт</a>
+                        </div>
+                    </li>
+            	</ul>
+            </div>
+		</div>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="footer-logo"><img src="{{ STATIC_URL }}images/footer-logo.png" alt="Прайс ДВ"></div>
+                <div class="eight columns">
+                    <p class="company">
+                        Товары, цены, фирмы Дальнего Востока<br>
+                        2006-2012 &copy; РИА &laquo;Восточная Столица&raquo;
+                    </p>
+                    <p class="info">
+                        Хабаровск, ул. Серышева, 31, 4 этаж<br>
+                        opt@dvonline.ru
+                    </p>
+                </div>
+                <div class="eight columns">
+                	<h3>Региональные Сайты</h3>
+                	<ul>
+                		<li><a href="#">Амурская область</a></li>
+                		<li><a href="#">Уврейская область</a></li>
+                		<li><a href="#">Иркусткая область</a></li>
+                		<li><a href="#">Камчатский край</a></li>
+                		<li><a href="#">Магаднаская область</a></li>
+                		<li><a href="#">Приморский край</a></li>
+                		<li><a href="#">Сахалинская область</a></li>
+                		<li><a href="#">Хабаровский край</a></li>
+                		<li><a href="#">Якутия (Саха)</a></li>
+                	</ul>
+                </div>
+                <div class="eight columns">
+                	<h3>Городские Сайты</h3>
+                	<ul>
+                		<li><a href="#">Амурск</a></li>
+                		<li><a href="#">Биробиджан</a></li>
+                		<li><a href="#">Благовещенск</a></li>
+                		<li><a href="#">Владивосток</a></li>
+                		<li><a href="#">Иркутск</a></li>
+                		<li><a href="#">Комсомольск-на-Амуре</a></li>
+                		<li><a href="#">Магадан</a></li>
+                		<li><a href="#">Находка</a></li>
+                		<li><a href="#">Нерюнгри</a></li>
+                		<li><a href="#">Петропавловск-Камчатский</a></li>
+                		<li><a href="#">Уссурийск</a></li>
+                		<li><a href="#">Хабаровск</a></li>
+                		<li><a href="#">Южно-Сахалинск</a></li>
+                	</ul>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Popups -->
+        <div class="popup region-tree">
+            Все регионы
+            <div class="buttons-panel">
+            	<a href="#" class="button">Отчистить</a>
+            	<a href="#" class="button">Сохранить</a>
+            	<a href="#" class="button right">Отмена</a>
+            </div>
+        </div>
+	</body>
+</html>

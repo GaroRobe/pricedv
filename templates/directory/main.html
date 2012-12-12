@@ -10,7 +10,7 @@
         <!-- Top navigation -->
 		<nav class="main-menu">
 			<ul class="row">
-				<li><a href="#">О проекте</a></li>
+				<li><a href="#">О проекте!!!</a></li>
 				<li><a href="#">Размещение информации</a></li>
 				<li><a href="#">Реклама на сайте</a></li>
 				<li><a href="#">Контакты</a></li>
@@ -108,20 +108,14 @@
                         </ul>
                         <div class="categories">
                         	<ul>
-                        		<li class="odd first-entry">Автомобили. Транспорт <span>(45667)</span></li>
-                        		<li class="even">Аптекарские товары, медтехника <span>(789)</span></li>
-                        		<li class="odd">Аттракционы, игровые автоматы <span>(639)</span></li>
-                        		<li class="even">Аудио-, видеотехника <span>(125)</span></li>
-                        		<li class="odd first-entry">Банковское, кассовое оборудование <span>(889)</span></li>
-                        		<li class="even">Бытовая техника <span>(223)</span></li>
-                        	</ul>
-                        	<ul>
-                        		<li class="odd first-entry">Оборудование <span>(17)</span></li>
-                        		<li class="even">Обувь, средства ухода за обувью <span>(65)</span></li>
-                        		<li class="odd">Одежда, белье, головные уборы <span>(144)</span></li>
-                        		<li class="even">Оргтехника, офисные принадлежности <span>(60)</span></li>
-                        		<li class="odd">Отдых и культура <span>(3)</span></li>
-                        		<li class="even first-entry">Продукты питания <span>(55)</span></li>
+                                {% for node in rootNodes %}
+                                    <li class="odd first-entry">{{ node.title }} <span>(45667)</span></li>
+                                    {% if forloop.counter == rootNodesHalfLength %}
+                                    </ul><ul>
+                                    {% endif %}
+                                {% empty %}
+                                <li>Ни одна категория не найдена. Вероятно проводятся работы на нашем сервере.</li>
+                                {% endfor %}
                         	</ul>
                         </div>
                     </div>

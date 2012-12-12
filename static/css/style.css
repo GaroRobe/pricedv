@@ -360,6 +360,7 @@ footer a:hover {
 
 /* Popups ------------------------ */
 .popup {
+    display: none;
     width: 450px;
     background: #f9f9f9;
     background: -moz-linear-gradient(top, #ffffff, #f2f2f2);

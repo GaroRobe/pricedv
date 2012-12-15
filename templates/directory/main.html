@@ -108,9 +108,9 @@
                         </ul>
                         <div class="categories">
                         	<ul>
-                                {% for node in rootNodes %}
+                                {% for node in categories %}
                                     <li class="odd first-entry">{{ node.title }} <span>(45667)</span></li>
-                                    {% if forloop.counter == rootNodesHalfLength %}
+                                    {% if forloop.counter == categoriesHalfLength %}
                                     </ul><ul>
                                     {% endif %}
                                 {% empty %}

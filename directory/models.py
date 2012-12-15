@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 
@@ -41,6 +42,10 @@ class Firm(models.Model):
 
 	class Meta:
 		db_table = 'firms'
+		
+class FirmForm(ModelForm):
+	class Meta:
+		model = Firm
 
 class Text(models.Model):
 	firm_id = models.ForeignKey(Firm, db_column='firm_id')

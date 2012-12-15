@@ -30,3 +30,23 @@ class AddFirm(BaseView):
 	def addfirm_post(self, request):
 		return HttpResponse('POST Fired!')
 	    #return render_to_response('directory/forms/addCompany.html')
+
+def offerView(request, offer_id):
+    rootNodes = Node.objects.filter(parent_id = 1)
+    return HttpResponse('offerView!')
+
+def firmView(request, firm_slug):
+    rootNodes = Node.objects.filter(parent_id = 1)
+    return HttpResponse('firmView!')
+
+def firmOffers(request, firm_slug):
+    rootNodes = Node.objects.filter(parent_id = 1)
+    return HttpResponse('firmOffers!')
+
+def firmCatOffers(request, firm_slug, cat_slug):
+    rootNodes = Node.objects.filter(parent_id = 1)
+    return HttpResponse('firmCatOffers!')
+
+def catView(request, cat_slug):
+    rootNodes = Node.objects.filter(parent_id = 1)
+    return HttpResponse('catView!')

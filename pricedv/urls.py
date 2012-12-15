@@ -15,7 +15,14 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
      url(r'^admin/', include(admin.site.urls)),
-     url(r'^categories/', 'directory.views.categories'),
-     url(r'^addfirm/', AddFirm()),
-     url(r'^', 'directory.views.root'),
+     url(r'^categories/$', 'directory.views.categories'),
+     url(r'^addfirm/$', AddFirm()),
+     url(r'^offer/(?P<offer_id>\d+)/$', 'directory.views.offerView'),
+     url(r'^firms/(?P<firm_slug>\w+)/$', 'directory.views.firmView'),
+     url(r'^firms/(?P<firm_slug>\w+)/fullprice/$', 'directory.views.firmOffers'),
+     url(r'^firms/(?P<firm_slug>\w+)/(?P<cat_slug>\w+)/$', 'directory.views.firmCatOffers'),
+     url(r'^firms/(?P<firm_slug>\w+)/\w+/(?P<cat_slug>\w+)/$', 'directory.views.firmCatOffers'),
+     url(r'^(?P<cat_slug>\w+)/$', 'directory.views.catView'),
+     url(r'^\w+/(?P<cat_slug>\w+)/$', 'directory.views.catView'),
+     url(r'^$', 'directory.views.root'),
 )

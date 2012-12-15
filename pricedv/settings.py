@@ -7,6 +7,8 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+ADMIN_MEDIA_PREFIX = '/admin-static/'
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -107,7 +109,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    'templates',
+    '/home/pricedv/pricedv/templates',
 )
 
 INSTALLED_APPS = (

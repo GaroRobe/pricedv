@@ -138,6 +138,9 @@ input {
 }
 
 /* Main Filter ------------------- */
+.main-filter {
+    margin-bottom: 20px;
+}
 .tabs {
     border-bottom: 1px solid #d21f34;
     padding: 0 10px;
@@ -214,6 +217,44 @@ input.filterSearch {
     cursor: pointer;
 }
 
+/* Bread-crumbs ------------------ */
+.bread-crumbs {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+.bread-crumbs a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 8px;
+    background: #eee;
+    line-height: 24px;
+    position: relative;
+    margin-right: 17px;
+}
+
+.bread-crumbs a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent #eee;
+    top: 0px;
+    right: -24px;
+}
+.bread-crumbs a.back {
+    background: #d21f34;
+    margin: 0 3px 0 12px;
+    color: white;
+}
+.bread-crumbs a.back:after {
+    border-color: transparent #d21f34 transparent transparent;
+    top: 0px;
+    left: -24px;
+}
+
 /* Categories -------------------- */
 .categories {
     font-size: 14px;
@@ -250,6 +291,10 @@ input.filterSearch {
 .categories .companies-count {
     display: none;
 }
+.categories>ul>li>a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 .dotted {
@@ -263,6 +308,37 @@ input.filterSearch {
 .side-adv {
     padding-top: 20px;
 }
+
+
+/* Offers ------------------------ */
+.offers {
+    margin: 20px 0;
+}
+.offers-table {
+    width: 100%;
+    colapse-border: colapse;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+.offers-table th {
+    text-align: left;    
+    padding: 8px 10px;
+}
+.offers-table th>a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: #eee;
+    box-shadow: inset 0 0 4px 1px white;
+}
+.offers-table td {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+}
+
 
 /* Partners News ----------------- */
 .partners .news {

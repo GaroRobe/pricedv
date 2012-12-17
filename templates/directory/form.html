@@ -1,4 +1,8 @@
-<form action="/addfirm/" method="post">{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" value="Submit" />
-</form>
+{% extends "directory/template.frontend.banners.html" %}
+
+{% block page-content %}
+    <form action="/addfirm/" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

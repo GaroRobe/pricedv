@@ -9,7 +9,7 @@ import json
 
 def categories(request):
     rootNodes = Node.objects.filter(parent_id = 1)
-    return render(request, 'directory/main.html', {'rootNodes': rootNodes})
+    return render(request, 'directory/todo.html', {'rootNodes': rootNodes})
 
 def root(request):
     categories = Node.objects.filter(parent_id = 1)
@@ -41,7 +41,7 @@ def offerView(request, offer_id):
 
 def firmView(request, firm_slug):
 	firm = Firm.objects.get(slug = firm_slug)
-	return render(request, 'directory/main.html', {
+	return render(request, 'directory/todo.html', {
 		'firmData': firm,
 	})
 
@@ -50,7 +50,7 @@ def firmOffers(request, firm_slug):
 	length = 50
 	offset = 0
 	offers = Offer.objects.filter(firm_id == firm.id)[:length:offset]
-	return render(request, 'directory/main.html', {
+	return render(request, 'directory/todo.html', {
 		'firmData': firm,
 		'offers': offers,
 	})
@@ -60,7 +60,7 @@ def firmCatOffers(request, firm_slug, cat_slug):
 	length = 50
 	offset = 0
 	offers = Offer.objects.filter(firm_id == firm.id)[:length:offset]
-	return render(request, 'directory/main.html', {
+	return render(request, 'directory/todo.html', {
 		'firmData': firm,
 		'offers': offers,
 	})
@@ -79,8 +79,9 @@ def catView(request, cat_slug):
 		#return offers in cat
 		length = 50
 		offset = 0
-		offers = Offer.objects.filter(firm_id__firm_nodes__slug = cat_slug)[:length:offset]
-		return render(request, 'directory/main.html', {
+		offers = Offer.objects.filter(node_id__slug = cat_slug)[:length:offset]
+		return render(request, 'directory/offers.html', {
 			'offers': offers,
+            'category': category,
 			'breadcrumbs': [{'url': '', 'title': category.parent_id.title}, {'url': '', 'title': category.title}],
 		})

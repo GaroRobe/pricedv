@@ -4,7 +4,7 @@
     <div class="categories">
         <ul>
             {% for node in categories %}
-            <li class="odd first-entry"><a href="{% url directory.views.catView node.slug %}">{{ node.title }}</a> <span>(45667)</span></li>
+            <li class="odd first-entry"><a href="{% url directory.views.catView node.slug %}">{{ node.title }}</a> <span>({{ node.offersNum }})</span></li>
             {% if forloop.counter == categoriesHalfLength %}
             </ul><ul>
             {% endif %}
